@@ -25,7 +25,7 @@
   transition: background-color $transition;
 
   &:hover {
-    background-color: darken(#D9D9D9, 10%);
+    background-color: color.adjust(#D9D9D9, $lightness: -10%);
   }
 
   &__icon {

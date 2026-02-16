@@ -43,7 +43,7 @@ withDefaults(defineProps<Props>(), {
     color: $white;
 
     &:hover {
-      background-color: darken(#ff0000, 10%);
+      background-color: color.adjust(#ff0000, $lightness: -10%);
       transform: translateY(-1px);
     }
 
