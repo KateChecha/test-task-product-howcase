@@ -1,13 +1,22 @@
 <template>
-  <div>
-    <h1>Welcome to Product Showcase</h1>
+  <section>
+    <UIText
+      tag="h1"
+      variant="default"
+      title="тестовое задание"
+    />
 
-    <UiButton
-      :text="'Welcome to Product Showcase'"
+    <UIButton
+      text="В каталог"
       type="primary"
       size="large"
+      @click="navigateTo('/catalog')"
     />
-  </div>
+  </section>
 </template>
-<script setup lang="ts">
-</script>
+
+<style lang="scss" scoped>
+section {
+  height: 100%;
+}
+</style>

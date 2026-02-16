@@ -5,7 +5,7 @@ interface Props {
   size?: 'medium' | 'large'
 }
 
-withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<Props>(), {
   type: 'primary',
   size: 'medium'
 })
@@ -20,6 +20,19 @@ withDefaults(defineProps<Props>(), {
 <style scoped lang="scss">
 .button {
   appearance: none;
+  background-color: transparent;
+  border: none;
+
+  &.primary {
+    padding-inline: 24px;
+    padding-block: 10px;
+    background-color: $red;
+    color: $white;
+  }
+
+  //&.outline {
+  //
+  //}
 }
 </style>
 

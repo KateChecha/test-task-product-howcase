@@ -1,12 +1,13 @@
 <template>
   <div class="global-container">
+    <SectionsHeader/>
     <slot/>
+    <SectionsFooter/>
   </div>
 </template>
 
-
 <style scoped lang="scss">
-div {
-  background-color: red;
+.global-container {
+  height: 100vh;
 }
 </style>

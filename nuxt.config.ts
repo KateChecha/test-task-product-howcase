@@ -2,6 +2,15 @@
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  typescript: {
+    tsConfig: {
+      include: ['../types/**/*.d.ts']
+    },
+    sharedTsConfig: {
+      include: ['../types/**/*.d.ts']
+    }
+  },
+  components: true,
   
   css: [
     '~/assets/styles/main.scss'
@@ -22,6 +31,15 @@ export default defineNuxtConfig({
           href: 'https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap'
         }
       ]
+    }
+  },
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@use "@/assets/styles/variables.scss" as *;'
+        }
+      }
     }
   }
 })
