@@ -20,8 +20,9 @@
 </template>
 
 <style lang="scss" scoped>
+$header: 82px;
 .page-home {
-  min-height: calc(100vh - 82px - 390px);
+  min-height: calc(100vh - $header);
   display: flex;
   align-items: center;
   justify-content: center;

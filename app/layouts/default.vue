@@ -9,15 +9,19 @@
 </template>
 
 <style scoped lang="scss">
+$header: 82px;
 .layout {
-  min-height: 100vh;
+  min-height: calc(100vh - $header);
   display: flex;
   flex-direction: column;
 
   &__content {
     flex: 1;
-    min-height: 100vh;
+    min-height: calc(100vh - ($header - 22px));
     background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 </style>
