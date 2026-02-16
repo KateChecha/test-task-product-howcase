@@ -12,9 +12,8 @@ const headerNavItems: HeaderNavItem[] = [
   { label: 'О нас', to: '#' }
 ]
 
-export const useDataHeaderNav = () => {
+export const useDataHeaderNav = (): { headerNavItems: HeaderNavItem[] } => {
   return {
     headerNavItems
   }
 }
-

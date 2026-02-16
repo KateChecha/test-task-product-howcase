@@ -5,6 +5,8 @@ $font-size-h2: 42px;
 $font-size-title: 24px;
 $font-size-description: 16px;
 $font-size-default: 14px;
+$font-size-installment: clamp(12px, 0.5vw + 10px, 14px);
+$font-size-product-name: clamp(12px, 1vw + 8px, 16px);
 
 $black: #000000;
 $white: #ffffff;
@@ -14,3 +16,5 @@ $grey: #F5F5F5;
 $grey-dark: #D9D9D9;
 
 $icon: clamp(28px, 6vw, 42px);
+
+$transition: 0.25s ease;

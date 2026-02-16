@@ -1,7 +1,6 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
-
 export default defineNuxtConfig({
   devtools: { enabled: true },
+
   typescript: {
     tsConfig: {
       include: ['../types/**/*.d.ts']
@@ -10,12 +9,13 @@ export default defineNuxtConfig({
       include: ['../types/**/*.d.ts']
     }
   },
+
   components: true,
-  
+
   css: [
     '~/assets/styles/main.scss'
   ],
-  
+
   app: {
     head: {
       title: 'Product Showcase',
@@ -33,6 +33,7 @@ export default defineNuxtConfig({
       ]
     }
   },
+
   vite: {
     css: {
       preprocessorOptions: {
@@ -41,5 +42,7 @@ export default defineNuxtConfig({
         }
       }
     }
-  }
+  },
+
+  modules: ['@nuxt/image']
 })

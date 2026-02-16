@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <button class="burger" type="button" aria-label="Меню">
+    <svg class="burger__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <mask id="mask0_1_397" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
         <rect width="24" height="24" fill="#D9D9D9"/>
       </mask>
@@ -8,17 +8,28 @@
         <path d="M3.5 17.6345V16.1348H20.5V17.6345H3.5ZM3.5 12.75V11.25H20.5V12.75H3.5ZM3.5 7.86525V6.3655H20.5V7.86525H3.5Z" fill="black"/>
       </g>
     </svg>
-  </div>
+  </button>
 </template>
 
 <style lang="scss" scoped>
-
-div {
+.burger {
+  appearance: none;
+  border: none;
   background-color: $grey-dark;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 40px;
   height: 40px;
+  cursor: pointer;
+  transition: background-color $transition;
+
+  &:hover {
+    background-color: darken(#D9D9D9, 10%);
+  }
+
+  &__icon {
+    pointer-events: none;
+  }
 }
 </style>

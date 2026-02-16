@@ -4,17 +4,18 @@ const { headerNavItems } = useDataHeaderNav()
 
 <template>
   <nav class="header-nav">
-    <ul class="header-nav-list">
+    <ul class="header-nav__list">
       <li
         v-for="item in headerNavItems"
         :key="item.to"
-        class="header-nav-item"
+        class="header-nav__item"
       >
         <UIText
           :title="item.label"
           variant="default"
           tag="link"
           :link-to="item.to"
+          class="header-nav__link"
         />
       </li>
     </ul>
@@ -26,18 +27,18 @@ const { headerNavItems } = useDataHeaderNav()
   background-color: $grey;
   padding-block: 10px;
   padding-inline: 24px;
-}
 
-.header-nav-list {
-  list-style: none;
-  display: flex;
-  justify-content: flex-start;
-  gap: 40px;
-  margin: 0;
-  padding: 0;
-}
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+  }
 
-.header-nav-link {
-  font-size: $font-size-default;
+  &__link {
+    font-size: $font-size-default;
+  }
 }
 </style>

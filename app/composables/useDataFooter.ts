@@ -48,9 +48,8 @@ const footerColumns: FooterColumn[] = [
   }
 ]
 
-export const useDataFooter = () => {
+export const useDataFooter = (): { footerColumns: FooterColumn[] } => {
   return {
     footerColumns
   }
 }
-
